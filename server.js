@@ -6,6 +6,6 @@ const app = express();
 
 app.use(serveStatic(path.join(__dirname, 'dist')));
 app.use(cors());
-app.set('port', process.env.PORT || 8080);
+app.set('port', process.env.PORT || 3010);
 
 app.listen(app.get('port'));
