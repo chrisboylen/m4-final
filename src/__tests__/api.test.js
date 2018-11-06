@@ -38,5 +38,11 @@ describe('API', () => {
 
       expect(window.fetch).toHaveBeenCalledWith(url);
     });
+
+    it('should return an array if status code is ok', async () => {
+      const result = await getMuseumData();
+
+      expect(result).toEqual(mockData);
+    });
   });
 });
