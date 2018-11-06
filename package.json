@@ -90,7 +90,8 @@
       "!babel.config.js",
       "!server.js",
       "!coverage",
-      "!dist"
+      "!dist",
+      "!*/main.js"
     ]
   }
 }
