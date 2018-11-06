@@ -8,4 +8,4 @@ app.use(serveStatic(path.join(__dirname, 'dist')));
 app.use(cors());
 app.set('port', process.env.PORT || 8080);
 
-app.listen(app.get('port'), () => console.log(`Museum Print Vuer is running on ${app.get('port')}.`));
+app.listen(app.get('port'));

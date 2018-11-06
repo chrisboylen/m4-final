@@ -1,4 +1,6 @@
+/* eslint-disable */
 import Vue from 'vue';
+/* eslint-enable */
 import { mount } from '@vue/test-utils';
 import Card from '../components/Card.vue';
 
