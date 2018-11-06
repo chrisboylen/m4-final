@@ -1,4 +1,7 @@
 import { getMuseumData } from '../Utilities/api';
+/* eslint-disable */
+const fetch = require("node-fetch");
+/* eslint-enable */
 
 describe('API', () => {
   describe('getMuseumData', () => {
