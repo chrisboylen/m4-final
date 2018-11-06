@@ -2,6 +2,7 @@
   <div class="card">
     <h2>Artist: {{ card.people[0].name}}</h2>
     <p>Type: {{ card.technique }}</p>
+    <p>Period: {{ card.period }}</p>
     <img :src="card.primaryimageurl" alt="print photo">
   </div>
 </template>
