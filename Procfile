@@ -1,1 +1,1 @@
-web: node main.js
+web: http-server ./ -p 3010
