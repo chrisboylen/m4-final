@@ -1,6 +1,9 @@
 {
   "name": "cb-m4-final",
   "version": "0.1.0",
+  "engines": {
+    "node": "9.8.0"
+  },
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
