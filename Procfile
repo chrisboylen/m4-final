@@ -1,1 +1,1 @@
-web: http-server ./ -p 3010
+worker: node server.js
