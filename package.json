@@ -9,7 +9,7 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "serve": "vue-cli-service serve",
-    "build": "node build/build.js",
+    "build": "vue-cli-service build",
     "eslint": "vue-cli-service lint",
     "test": "jest",
     "heroku-postbuild": "npm run build"
