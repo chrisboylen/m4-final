@@ -24,13 +24,15 @@ export default {
 </script>
 
 <style>
+html {
+  background: radial-gradient(rgb(153, 130, 99, 0.8), rgb(153, 130, 99, 0.4)), url("../assets/grunge.jpg");
+}
 body {
   background-color: #998263fc;
   box-sizing: border-box;
   margin: 0;
 }
 #app {
-  background: radial-gradient(rgb(153, 130, 99, 0.8), rgb(153, 130, 99, 0.4)), url("../assets/grunge.jpg");
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
