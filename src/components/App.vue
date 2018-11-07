@@ -30,6 +30,7 @@ body {
   margin: 0;
 }
 #app {
+  background: radial-gradient(rgb(153, 130, 99, 0.8), rgb(153, 130, 99, 0.4)), url("../assets/grunge.jpg");
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,6 +38,7 @@ body {
 }
 header {
   background-color: #342c21;
+  box-shadow: 0px 9px 33px 6px #272119;
   color: #ffa048;
   font-family: 'Russo One', sans-serif;
   font-size: 3rem;
