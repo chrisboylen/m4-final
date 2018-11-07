@@ -1,27 +1,31 @@
 <template>
   <div class="cont">
     <div class="select-cont">
-      <label for="select-type">Filter by Type</label>
-      <select id="select-type" v-model="selectedType">
-        <option value="All">All</option>
-        <option value="Woodcut">Woodcut</option>
-        <option value="Engraving">Engraving</option>
-        <option value="Lithograph">Lithograph</option>
-        <option value="Screen print">Screen Print</option>
-        <option value="Blueprint">Blueprint</option>
-        <option value="Diazotype">Diazotype</option>
-        <option value="Positive photostat print">Positive photostat print</option>
-        <option value="Photomechanical print">Photomechanical print</option>
-      </select>
-      <label for="select-culture">Filter by Culture</label>
-      <select id="select-culture" v-model="selectedCulture">
-        <option value="All">All</option>
-        <option value="French">French</option>
-        <option value="American">American</option>
-        <option value="German">German</option>
-        <option value="Japanese">Japanese</option>
-        <option value="British">British</option>
-      </select>
+      <div class="select-group one">
+        <label for="select-type">Filter by Type</label>
+        <select id="select-type" v-model="selectedType">
+          <option value="All">All</option>
+          <option value="Woodcut">Woodcut</option>
+          <option value="Engraving">Engraving</option>
+          <option value="Lithograph">Lithograph</option>
+          <option value="Screen print">Screen Print</option>
+          <option value="Blueprint">Blueprint</option>
+          <option value="Diazotype">Diazotype</option>
+          <option value="Positive photostat print">Positive photostat print</option>
+          <option value="Photomechanical print">Photomechanical print</option>
+        </select>
+      </div>
+      <div class="select-group">
+        <label for="select-culture">Filter by Culture</label>
+        <select id="select-culture" v-model="selectedCulture">
+          <option value="All">All</option>
+          <option value="French">French</option>
+          <option value="American">American</option>
+          <option value="German">German</option>
+          <option value="Japanese">Japanese</option>
+          <option value="British">British</option>
+        </select>
+      </div>
     </div>
     <Card 
       v-for="card in filterByType"
@@ -95,9 +99,12 @@ export default {
     margin: 1rem;
     width: 100%;
   }
+  .select-group {
+    background: radial-gradient( rgb(255, 245, 232, 0.5), rgb(255, 245, 232, 0.2), rgb(255, 0, 0, 0));
+    box-shadow: 0px 0px 20px 3px rgba(212, 196, 176, 0.3);
+  }
   label {
-    color: #fff5e8;
-    font-size: 1.2rem;
+    color: #342c21;
     font-weight: bold;
     line-height: 2rem;
     margin: 0 1rem;
@@ -106,13 +113,13 @@ export default {
     background-color: #fff5e8;
     border: 2px solid #ffa048;
     border-radius: 5px;
-    height: 2rem;
+    height: 2.1rem;
     outline-color: #ffa048;
   }
   select option {
     background-color: #fff5e8;
   }
-  #select-type {
+  .one {
     margin: 0 10rem 0 0;
   }
 </style>
