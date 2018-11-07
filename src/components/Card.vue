@@ -1,8 +1,9 @@
 <template>
   <div class="card">
-    <h2>Artist: {{ card.people[0].name}}</h2>
-    <p>Type: {{ card.technique }}</p>
-    <p>Period: {{ card.period }}</p>
+    <h2><span>Artist:</span> {{ card.people[0].name}}</h2>
+    <p><span>Type:</span> {{ card.technique }}</p>
+    <p><span>Culture:</span> {{ card.culture }}</p>
+    <p><span>Century:</span> {{ card.century }}</p>
     <img :src="card.primaryimageurl" alt="print photo">
   </div>
 </template>
@@ -17,7 +18,7 @@
 <style scoped>
   .card {
     background-color: #fff5e8;
-    border: solid 2px #342c21;
+    border: solid 3px #342c21;
     border-radius: 5px;
     box-shadow: 0px 4px 23px 2px #272119;
     margin: .5rem;
@@ -26,11 +27,14 @@
   }
   h2 {
     background-color: #fdcd9f;
-    border: solid 3px #fdcd9f;
+    border-bottom: solid 2px;
     border-radius: 5px 5px 0 0;
     font-size: 1.2rem;
     margin: 0;
     padding: .5rem;
+  }
+  span {
+    font-weight: bold;
   }
   img {
     height: 10rem;

@@ -24,6 +24,9 @@ export default {
 </script>
 
 <style>
+html {
+  background: radial-gradient(rgb(153, 130, 99, 0.8), rgb(153, 130, 99, 0.4)), url("../assets/grunge.jpg");
+}
 body {
   background-color: #998263fc;
   box-sizing: border-box;
@@ -37,6 +40,7 @@ body {
 }
 header {
   background-color: #342c21;
+  box-shadow: 0px 9px 33px 6px #272119;
   color: #ffa048;
   font-family: 'Russo One', sans-serif;
   font-size: 3rem;
