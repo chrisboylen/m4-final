@@ -25,10 +25,10 @@ export default {
 
 <style>
 html {
-  background: radial-gradient(rgb(153, 130, 99, 0.8), rgb(153, 130, 99, 0.4)), url("../assets/grunge.jpg");
+  background: radial-gradient(rgb(153, 130, 99, 0.8), rgb(153, 130, 99, 0.2)), url("../assets/grunge.jpg");
 }
 body {
-  background-color: #998263fc;
+  background-color: #99826300;
   box-sizing: border-box;
   margin: 0;
 }
