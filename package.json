@@ -6,8 +6,9 @@
     "start": "node server.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "test": "jest"
+    "eslint": "vue-cli-service lint",
+    "test": "jest",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2",
@@ -15,6 +16,8 @@
     "babel-jest": "^23.6.0",
     "babel-plugin-require-context-hook": "^1.0.0",
     "cors": "^2.8.5",
+    "http-server": "^0.11.1",
+    "node-fetch": "^2.2.1",
     "vue": "^2.5.17"
   },
   "devDependencies": {

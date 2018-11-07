@@ -6,6 +6,9 @@ const app = express();
 
 app.use(serveStatic(path.join(__dirname, 'dist')));
 app.use(cors());
-app.set('port', process.env.PORT || 8080);
+app.set('port', process.env.PORT || 3010);
+app.get('/', (request, response) => {
+  response.send('Hola!');
+});
 
-app.listen(app.get('port'), () => console.log(`Museum Print Vuer is running on ${app.get('port')}.`));
+app.listen(app.get('port'));
