@@ -3,26 +3,54 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "node server.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "eslint": "vue-cli-service lint",
+    "test": "jest",
+    "postinstall": "npm run build"
   },
   "dependencies": {
+    "@babel/runtime": "^7.1.2",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-require-context-hook": "^1.0.0",
+    "cors": "^2.8.5",
+    "http-server": "^0.11.1",
+    "node-fetch": "^2.2.1",
     "vue": "^2.5.17"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
     "@vue/cli-plugin-babel": "^3.1.1",
     "@vue/cli-plugin-eslint": "^3.1.1",
     "@vue/cli-service": "^3.1.1",
+    "@vue/test-utils": "^1.0.0-beta.25",
     "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-import": "^1.11.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "chai": "^4.2.0",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
-    "vue-template-compiler": "^2.5.17"
+    "express": "^4.16.4",
+    "jest": "^23.6.0",
+    "jest-transform-stub": "^1.0.0",
+    "serve-static": "^1.13.2",
+    "vue-jest": "^3.0.0",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.25.1"
   },
   "eslintConfig": {
     "root": true,
     "env": {
-      "node": true
+      "node": true,
+      "es6": true,
+      "browser": true,
+      "jest": true
     },
     "extends": [
       "plugin:vue/essential",
@@ -42,5 +70,31 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "jest": {
+    "moduleNameMapper": {
+      "^vue$": "vue/dist/vue.common.js"
+    },
+    "transform": {
+      "^.+\\.vue$": "<rootDir>/node_modules/vue-jest",
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "vue"
+    ],
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,vue}",
+      "!**/node_modules/**",
+      "!babel.config.js",
+      "!server.js",
+      "!coverage",
+      "!dist",
+      "!*/main.js"
+    ]
+  }
 }
