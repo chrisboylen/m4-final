@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "start": "npm run dev",
     "serve": "vue-cli-service serve",
-    "build": "NODE_ENV=production webpack",
+    "build": "node build/build.js",
     "eslint": "vue-cli-service lint",
     "test": "jest",
-    "heroku-postbuild": "npm run build",
-    "webpack": "webpack-dev-server"
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2",
