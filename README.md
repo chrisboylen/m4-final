@@ -4,6 +4,8 @@ https://travis-ci.org/chrisboylen/museum-print-vuer.svg?branch=master
 
 ## Setup
 #### Installation
+1.  `git clone https://github.com/chrisboylen/museum-print-vuer.git`
+1.  `cd museum-print-vuer`
 1.  `npm install`
 1.  `npm run serve` Compiles and hot-reloads for development
 1.  `npm run build` Compiles and minifies for production
